@@ -1,0 +1,50 @@
+/*
+use master;
+alter database student_db set single_user with rollback immediate;
+drop DATABASE student_db;
+*/
+
+-- 創建資料庫
+CREATE DATABASE student_db COLLATE Chinese_Taiwan_Stroke_90_CI_AS_SC ;
+
+
+-- 使用剛剛創建的資料庫
+USE student_db;
+
+-- 創建student表格
+CREATE TABLE  student (
+    s_id INT IDENTITY PRIMARY KEY,
+    s_name VARCHAR(10)
+);
+
+INSERT INTO student (s_name) VALUES
+('張艾琳'),
+('李嘉莉'),
+('王宏偉'),
+('趙美玲'),
+('鄭文彬'),
+('陳思婷'),
+('楊心怡'),
+('周家豪'),
+('吳雅婷'),
+('劉宗翰');
+
+/*創建登入使用者（執行過一次就好） */
+USE master;
+GO
+
+CREATE LOGIN student_user 
+WITH PASSWORD = 'User1234';
+GO
+/*創建登入使用者（執行過一次就好）end */
+
+/*重新建立資料庫就要執行 */
+USE student_db;
+GO
+
+CREATE USER student_user FOR LOGIN student_user;
+GO
+
+ALTER ROLE db_datareader ADD MEMBER student_user;
+ALTER ROLE db_datawriter ADD MEMBER student_user;
+/*重新建立資料庫就要執行 end */
