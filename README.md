@@ -1,4 +1,4 @@
-本專案是為了Demo 如何將 Springboot專案 製成docker image，並連上部署在docker的資料庫（運行中）
+本專案是為了Demo 如何將 Springboot專案 製成docker image，並連上部署在docker，運行中的mssql資料庫
 為了方便快速使用本專案，可使用專案資料夾中的 dbSmample.txt 建立相同資料庫環境
 
 ## 環境報備
