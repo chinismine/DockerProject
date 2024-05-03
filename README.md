@@ -9,10 +9,6 @@
 - Docker Engine v24.0.6
 - Docker Desktop(喜視覺化介面可用)
 
-*可以直接github看我的專案配置*
-
-
-
 ## 在SpringBoot專案中，需要做什麼？
 1. 建立檔案**Dockerfile**
 ＊直接建立在專案根目錄下
