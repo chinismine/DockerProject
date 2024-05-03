@@ -71,3 +71,4 @@ spring.datasource.url=jdbc:sqlserver://${DATABASE_HOST:localhost}:1433;databaseN
 `docker run -d --name mycontainer --network my-network -p 8082:8082 <docker-springboot-demo 的image編號>`
 
 以上完成後，容器應該就執行成功囉！
+網址列輸入 localhost:8082 就可以瀏覽網站
